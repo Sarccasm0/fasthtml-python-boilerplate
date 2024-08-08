@@ -12,7 +12,7 @@ posts = [
 
 
 def texto(title, statement,boton_texto,boton_link):
-    return Div(Titled("Jefferson's Portfolio"),H1(title),P(statement),boton(boton_texto,boton_link),cls="container-fluid")
+    return Div(Title("Jefferson's Portfolio"),H1(title),P(statement),boton(boton_texto,boton_link),cls="container-fluid")
 
 app,rt = fast_app(
         hdrs=(
