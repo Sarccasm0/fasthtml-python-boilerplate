@@ -49,7 +49,7 @@ def get():
 
 @rt("/egg")
 def get():
-    return titled
+    return Title("Jefferson's App")
 
 
 
