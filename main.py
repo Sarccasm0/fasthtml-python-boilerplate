@@ -16,9 +16,10 @@ def texto(title, statement,boton_texto,boton_link):
 
 app,rt = fast_app(
         hdrs=(
+        Title("Jefferson's App"),
         Link(rel='stylesheet',href='/main.css',type='text/css'),
         Link(rel='stylesheet',href='https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.blue.css',type='text/css'),
-        Title("Jefferson's Portfolio")
+        
     )
 )
 
@@ -28,7 +29,7 @@ app,rt = fast_app(
 
 @rt("/")
 def get():
-    return Div(Titled('Sywons App'),texto("Hi, my name is Jefferson 😎",P("Multimedia Designer.. Kinda, 3D noob and aspiring programmer."),"Know what things I do when I get bored 🐱‍👤","/about"))
+    return Div(texto("Hi, my name is Jefferson 😎",P("Multimedia Designer.. Kinda, 3D noob and aspiring programmer."),"Know what things I do when I get bored 🐱‍👤","/about"))
 
 @rt("/about")
 def get():
