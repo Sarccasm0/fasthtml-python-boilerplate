@@ -14,15 +14,14 @@ posts = [
 def texto(title, statement,boton_texto,boton_link):
     return Div(H1(title),P(statement),boton(boton_texto,boton_link),cls="container-fluid")
 
-app,rt = fast_app(
-        hdrs=(
-        Title('Jefferson Portfolio'),
-        Link(rel='stylesheet',href='/main.css',type='text/css'),
-        Link(rel='stylesheet',href='https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.blue.css',type='text/css'),
-        
+app, rt = fast_app(
+    hdrs=(
+        Title("My Custom Tab Title"),  # Set the title here
+        Meta(name="description", content="This is a custom description for my webpage."),
+        Link(rel='stylesheet', href='/main.css', type='text/css'),
+        Link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.blue.css', type='text/css')
     )
 )
-
 
 #Routes
 
