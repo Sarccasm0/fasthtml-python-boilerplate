@@ -12,13 +12,13 @@ posts = [
 
 
 def texto(title, statement,boton_texto,boton_link):
-    return Div(Title("Jefferson's Portfolio"),H1(title),P(statement),boton(boton_texto,boton_link),cls="container-fluid")
+    return Div(H1(title),P(statement),boton(boton_texto,boton_link),cls="container-fluid")
 
 app,rt = fast_app(
         hdrs=(
         Link(rel='stylesheet',href='/main.css',type='text/css'),
         Link(rel='stylesheet',href='https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.blue.css',type='text/css'),
-        
+        Title("Jefferson's Portfolio")
     )
 )
 
@@ -32,7 +32,7 @@ def get():
 
 @rt("/about")
 def get():
-    return Div("Jefferson's Portfolio",texto("INSERT PORTFOLIO 🐱‍🚀","A  'Place' to show what I'm interested in ","Back to The Casa","/"),
+    return Div(exto("INSERT PORTFOLIO 🐱‍🚀","A  'Place' to show what I'm interested in ","Back to The Casa","/"),
                Div(
             *[Div(
                 A(
