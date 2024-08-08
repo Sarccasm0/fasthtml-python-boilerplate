@@ -32,7 +32,7 @@ def get():
 
 @rt("/about")
 def get():
-    return Div(exto("INSERT PORTFOLIO 🐱‍🚀","A  'Place' to show what I'm interested in ","Back to The Casa","/"),
+    return Div(texto("INSERT PORTFOLIO 🐱‍🚀","A  'Place' to show what I'm interested in ","Back to The Casa","/"),
                Div(
             *[Div(
                 A(
