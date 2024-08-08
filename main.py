@@ -1,41 +1,59 @@
-from fasthtml.common import *
+from fasthtml.fastapp import *
 
-app, rt = fast_app(hdrs=(picolink))
+def boton(boton_texto, boton_link):
+    return A(boton_texto,href=boton_link,_class="button")
+
+posts = [
+     {'imageUrl': '/img1.png', 'link': '/img1.png'},
+    {'imageUrl': '/img2.png', 'link': '/img2.png'},
+   
+]
+
+
+
+def texto(title, statement,boton_texto,boton_link):
+    return Div(H1(title),P(statement),boton(boton_texto,boton_link),cls="container-fluid")
+
+app,rt = fast_app(
+        hdrs=(
+        Link(rel='stylesheet',href='/main.css',type='text/css'),
+        Link(rel='stylesheet',href='https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.blue.css',type='text/css'),
+    )
+)
+
+
+#Routes
 
 
 @rt("/")
 def get():
-    return (
-        Socials(
-            title="Vercel + FastHTML",
-            site_name="Vercel",
-            description="A demo of Vercel and FastHTML integration",
-            image="https://vercel.fyi/fasthtml-og",
-            url="https://fasthtml-template.vercel.app",
-            twitter_site="@vercel",
-        ),
-        Container(
-            Card(
-                Group(
-                    P(
-                        "FastHTML is a new next-generation web framework for fast, scalable web applications with minimal, compact code. It builds on top of popular foundations like ASGI and HTMX. You can now deploy FastHTML with Vercel CLI or by pushing new changes to your git repository.",
-                    ),
+    return texto("Hi, my name is Jefferson 😎",P("Multimedia Designer.. Kinda, 3D noob and aspiring programmer."),"Know what things I do when I get bored 🐱‍👤","/about")
+
+@rt("/about")
+def get():
+    return Div(texto("INSERT PORTFOLIO 🐱‍🚀","A  'Place' to show what I'm interested in ","Back to The Casa","/"),
+               Div(
+            *[Div(
+                A(
+                    Img(src=post['imageUrl']),
+                    href=post['link'],
+                    target='_blank'
                 ),
-                header=(Titled("FastHTML + Vercel")),
-                footer=(
-                    P(
-                        A(
-                            "Deploy your own",
-                            href="https://vercel.com/templates/python/fasthtml-python-boilerplate",
-                        ),
-                        " or ",
-                        A("learn more", href="https://docs.fastht.ml/"),
-                        "about FastHTML.",
-                    )
-                ),
-            ),
-        ),
+                cls='grid-item'
+            ) for post in posts],
+            cls='grid-container'
+        )
     )
+
+               
+        
+    
+
+@rt("/egg")
+def get():
+    return texto("Nuevo componente", "Pasando componentes XD","Volver a la pagina principal","/")
+
+
 
 
 serve()

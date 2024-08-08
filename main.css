@@ -1,0 +1,61 @@
+/* styles.css */
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center; /* Center text within each item */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+    gap: 10px;
+    padding: 10px;
+    /*overflow-y: auto;  Enable vertical scrolling */
+    /*max-height: 80vh;  Adjust as needed */
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%; /* Ensure the item takes full height of the grid cell */
+    
+}
+
+.grid-item img {
+    width: 100%; /* Ensure the image takes full width of the grid item */
+    height: 80%; /* Ensure the image takes full height of the grid item */
+    object-fit: cover; /* Ensure the image covers the entire area */
+    border-radius: 20px;
+}
