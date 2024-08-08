@@ -16,7 +16,7 @@ def texto(title, statement,boton_texto,boton_link):
 
 app,rt = fast_app(
         hdrs=(
-        Title("Jefferson's App"),
+        Title('Jefferson Portfolio'),
         Link(rel='stylesheet',href='/main.css',type='text/css'),
         Link(rel='stylesheet',href='https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.blue.css',type='text/css'),
         
