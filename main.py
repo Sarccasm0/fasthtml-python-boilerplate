@@ -2,8 +2,8 @@ from fasthtml.fastapp import *
 
 app, rt = fast_app(
     hdrs=(
-        Title("My Custom Tab Title"),  # Set the title here
-        Meta(name="description", content="This is a custom description for my webpage."),
+        Title("Jefferson Web"),  # Set the title here
+        Meta(name="description", content="Portfolio of 3d  experiments and stuff i do when i get bored"),
         Link(rel='stylesheet', href='/main.css', type='text/css'),
         Link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.blue.css', type='text/css')
     )
@@ -30,12 +30,13 @@ def texto(title, statement,boton_texto,boton_link):
 
 @rt("/")
 def get():
-    return Div(Title("Jefferson Portfolio"),
+    return Div(Title("Jefferson Rodriguez"),
         texto("Hi, my name is Jefferson 😎",P("Multimedia Designer.. Kinda, 3D noob and aspiring programmer."),"Know what things I do when I get bored 🐱‍👤","/about"))
 
-@rt("/about")
+@rt("/MyStuff")
 def get():
-    return Div(texto("INSERT PORTFOLIO 🐱‍🚀","A  'Place' to show what I'm interested in ","Back to The Casa","/"),
+    return Div(Title("My Stuff"),
+        texto("INSERT PORTFOLIO 🐱‍🚀","A  'Place' to show what I'm interested in ","Back to The Casa","/"),
                Div(
             *[Div(
                 A(
