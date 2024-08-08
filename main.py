@@ -30,7 +30,8 @@ def texto(title, statement,boton_texto,boton_link):
 
 @rt("/")
 def get():
-    return Div(texto("Hi, my name is Jefferson 😎",P("Multimedia Designer.. Kinda, 3D noob and aspiring programmer."),"Know what things I do when I get bored 🐱‍👤","/about"))
+    return Div(Title("Jefferson Portfolio"),
+        texto("Hi, my name is Jefferson 😎",P("Multimedia Designer.. Kinda, 3D noob and aspiring programmer."),"Know what things I do when I get bored 🐱‍👤","/about"))
 
 @rt("/about")
 def get():
