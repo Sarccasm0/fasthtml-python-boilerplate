@@ -28,7 +28,7 @@ app,rt = fast_app(
 
 @rt("/")
 def get():
-    return texto("Hi, my name is Jefferson 😎",P("Multimedia Designer.. Kinda, 3D noob and aspiring programmer."),"Know what things I do when I get bored 🐱‍👤","/about")
+    return Div(Titled('Sywons App'),texto("Hi, my name is Jefferson 😎",P("Multimedia Designer.. Kinda, 3D noob and aspiring programmer."),"Know what things I do when I get bored 🐱‍👤","/about"))
 
 @rt("/about")
 def get():
@@ -48,7 +48,7 @@ def get():
 
 @rt("/egg")
 def get():
-    return texto("Nuevo componente", "Pasando componentes XD","Volver a la pagina principal","/")
+    return titled
 
 
 
