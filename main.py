@@ -34,7 +34,7 @@ def get():
     return Html(
         html_head("Jefferson"),  # Set the title for this route
         Body(
-            texto("Hi, my name is Jefferson 😎", "Multimedia Designer.. Kinda, 3D noob and aspiring programmer.", "Know what things I do when I get bored 🐱‍👤", "/portfolio")
+            texto("Hallo,people call me Jefferson.", "Multimedia Designer.. Kinda, 3D noob and aspiring programmer.", "Know what things I do when I get bored 🐱‍👤", "/portfolio")
         )
     )
 
@@ -43,7 +43,7 @@ def get():
     return Html(
         html_head("Portfolio"),  # Set the title for this route
         Body(
-            texto("PORTFOLIO 🐱‍🚀", "A 'Place' to show what I'm interested in ", "Back", "/"),
+            texto("PORTFOLIO 🐱‍🚀", "A 'Place' to show what I'm interested in.", "Back", "/"),
             Div(
                 *[Div(
                     A(
