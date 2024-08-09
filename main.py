@@ -43,7 +43,7 @@ def get():
     return Html(
         html_head("Portfolio"),  # Set the title for this route
         Body(
-            texto("PORTFOLIO 🐱‍🚀", "A 'Place' to show what I'm interested in ", "Back to The Casa", "/"),
+            texto("PORTFOLIO 🐱‍🚀", "A 'Place' to show what I'm interested in ", "Back", "/"),
             Div(
                 *[Div(
                     A(
